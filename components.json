@@ -5104,6 +5104,29 @@
           "mirror": "https://github.com/Droid-Deck/DroidDeck-Components/releases/download/system-libraries-v1/xna40.msi"
         }
       ]
+    },
+    {
+      "name": "asf-file-source",
+      "description": "Open WMV/ASF videos with File Source (Async.) instead of the WM ASF Reader",
+      "provider": "Wine",
+      "dependencies": [],
+      "status": "ready",
+      "steps": [
+        {
+          "action": "set_register_key",
+          "key": "HKLM\\\\Software\\\\Classes\\\\Media Type\\\\{e436eb83-524f-11ce-9f53-0020af0ba770}\\\\{6b6d0801-9ada-11d0-a520-00a0d10129c0}",
+          "value": "Source Filter",
+          "data": "{e436ebb5-524f-11ce-9f53-0020af0ba770}",
+          "type": "REG_SZ"
+        },
+        {
+          "action": "set_register_key",
+          "key": "HKLM\\\\Software\\\\Classes\\\\Wow6432Node\\\\Media Type\\\\{e436eb83-524f-11ce-9f53-0020af0ba770}\\\\{6b6d0801-9ada-11d0-a520-00a0d10129c0}",
+          "value": "Source Filter",
+          "data": "{e436ebb5-524f-11ce-9f53-0020af0ba770}",
+          "type": "REG_SZ"
+        }
+      ]
     }
   ]
 }
